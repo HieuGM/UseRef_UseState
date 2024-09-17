@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So sánh useRef và useState</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>So sánh useRef và useState trong React</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Tiêu chí</th>
+                <th>useRef</th>
+                <th>useState</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="highlight"></tr>
+                <td class="center" colspan="3">Giống nhau</td>
+            </tr>
+            <tr>
+                <td>Sử dụng trong function component</td>
+                <td colspan="2">Cả "useRef" và "useState" đều được sử dụng trong function component của React.</td>
+            </tr>
+            <tr class="highlight"></tr>
+                <td class="center" colspan="3">Khác nhau</td>
+            </tr>
+            <tr>
+                <td>Cập nhật giá trị</td>
+                <td>Cập nhật giá trị không làm component render lại.</td>
+                <td>Cập nhật giá trị làm component render lại.</td>
+            </tr>
+            <tr>
+                <td>Lưu trữ giá trị</td>
+                <td>Lưu trữ giá trị tham chiếu (có thể thay đổi), có thể giữ qua các lần render mà không kích hoạt re-render.</td>
+                <td>Lưu trữ giá trị (không thể thay đổi), giá trị sẽ được lưu giữ và thay đổi qua các lần render.</td>
+            </tr>
+            <tr>
+                <td>Truy cập DOM</td>
+                <td>Thường dùng để tham chiếu trực tiếp đến phần tử DOM.</td>
+                <td>Không được dùng để tham chiếu đến DOM, chỉ dùng để lưu trạng thái của component.</td>
+            </tr>
+            <tr>
+                <td>Sử dụng</td>
+                <td>Khi cần lưu trữ giá trị qua các lần render mà không cần re-render (ví dụ: đếm số lần render, lưu trữ giá trị input trước đó).</td>
+                <td>Khi cần giá trị làm thay đổi UI và cần re-render khi giá trị thay đổi (ví dụ: quản lý trạng thái như toggle, form input).</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
